@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Temperature Hot</title>
+    <title>Temperature Dashboard</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,9 +11,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
-            background: url(images/bg-image.jpg) no-repeat;
+            
             background-size: cover;
             height: 100vh;
+            min-height: 100%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(4, 15, 62, 0.3)), url(images/background.jpg) no-repeat;;
+            background-size: cover;
         }
     </style>
 </head>
@@ -33,7 +36,7 @@
             <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
             <h1><span id="city"></span></h1>
             <h3><span id="temperature"></span>&deg;C</h3>
-            <h1 id="condition" class="lead">Clouds</h1>
+            <h1 id="condition" class="lead"></h1>
         </div>
     </div>
 

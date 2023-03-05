@@ -13,18 +13,12 @@ const displayTemperature = (data) => {
 
     console.log(data.name);
     console.log(data);
-    // const temperature = document.getElementById('temperature');
-    // temperature.innerText = data.main.temp;
-
-    // const placeName = document.getElementById('city');
-    // placeName.innerText = data.name;
 
     setInnerTextById('temperature',data.main.temp);
     setInnerTextById('city', data.name);
     setInnerTextById('condition',data.weather[0].main);
 
-
-
+    document.getElementById('search-field').value='';
 
 }
 
@@ -40,5 +34,13 @@ document.getElementById('btn-search').addEventListener('click', function () {
     loadTemperature(city);
 })
 
-loadTemperature('dhaka')
+const input = document.getElementById("search-field");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("btn-search").click();
+  }
+});
+
+loadTemperature()
 
